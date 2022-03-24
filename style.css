@@ -1,0 +1,204 @@
+/* --------------- */
+/* Custom variable */
+/* --------------- */
+:root {
+  /* colors */
+  --clr-primary-100: hsl(25, 97%, 53%);
+
+  --clr-neutral-100: hsl(217, 12%, 63%);
+  --clr-neutral-200: hsl(216 12% 54% / 0.1);
+  --clr-neutral-300: hsl(213 19% 18% / 0.8);
+  --clr-neutral-400: hsl(216, 12%, 8%);
+
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* font size */
+  --fs-100: 15px;
+  --fs-200: 0.9rem;
+  --fs-300: 1.7rem;
+
+  /* font family */
+  --ff-regular: "Overpass", sans-serif;
+
+  /* font weight */
+  --fw-100: 400;
+  --fw-200: 700;
+}
+
+/* ----------------- */
+/* Reset             */
+/* ----------------- */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Margin reset*/
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img:not([hidden]),
+picture:not([hidden]) {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ------------------ */
+/* Utility classes    */
+/* ------------------ */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* background colors */
+.bg-primary-100 {
+  background-color: var(--clr-primary-100);
+}
+.bg-neutral-200 {
+  background-color: var(--clr-neutral-200);
+}
+.bg-neutral-300 {
+  background-color: var(--clr-neutral-300);
+}
+
+/* Font colors */
+.text-white {
+  color: var(--clr-white);
+}
+.text-primary-100 {
+  color: var(--clr-primary-100);
+}
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+/* font size */
+.fs-100 {
+  font-size: var(--fs-100);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+/* font weights */
+.fw-100 {
+  font-weight: var(--fw-100);
+}
+.fw-200 {
+  font-weight: var(--fw-200);
+}
+
+/* Setting body defaults */
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--ff-regular);
+
+  background-color: var(--clr-neutral-400);
+  min-height: 100vh;
+}
+
+/* --------------------- */
+/* Components            */
+/* --------------------- */
+main {
+  padding: 2rem;
+  border-radius: 25px;
+
+  max-width: 25rem;
+}
+article > p {
+  line-height: 1.6;
+}
+section {
+  gap: 1.3rem !important;
+}
+main > section:last-child {
+  justify-items: center;
+  text-align: center;
+
+  padding-block: 1rem;
+}
+main > section:last-child > div {
+  border-radius: 35px;
+}
+main > section:last-child > div > h3 {
+  padding-inline: 0.9rem;
+  padding-block: 0.2rem;
+}
+
+/* numbered button styles */
+.num-buttons {
+  justify-content: space-between;
+}
+.num-buttons > button {
+  width: 3rem;
+  aspect-ratio: 1;
+
+  border: none;
+  border-radius: 50%;
+}
+.num-buttons > button:hover {
+  background-color: var(--clr-primary-100);
+  color: var(--clr-white);
+}
+
+/* Star */
+.star {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  aspect-ratio: 1;
+
+  border: none;
+  border-radius: 50%;
+}
+
+/* Submit button */
+section > button {
+  border: none;
+  border-radius: 35px;
+
+  text-align: center;
+  padding: 0.6rem;
+}
+section > button:hover,
+section > button:focus {
+  background-color: var(--clr-white);
+  color: var(--clr-primary-100);
+}
+
+/* Active */
+.active {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-white);
+}
+.active:hover {
+  background-color: var(--clr-neutral-100) !important;
+  color: var(--clr-white) !important;
+}
